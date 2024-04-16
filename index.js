@@ -6,7 +6,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/oi', function (req, res) {
-    res.send('Olá mundo')
+    res.send('Olá ewelyn!')
   })
 
 app.listen(3000)
