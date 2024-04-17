@@ -14,7 +14,8 @@ app.get('/ooi', function (req, res) {
 
   // endpoint Read All -> [GET] /items
   app.get('/items', function (req, res){
-    res.send(lista)
+    // filtra falsys, mas preserva indices
+    res.send(lista.filter(Boolean))
   })
 
   // Endpoint Read By id -> [GET] /item/:id
