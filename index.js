@@ -38,4 +38,21 @@ app.get('/ooi', function (req, res) {
     res.send(`Item adicionado com sucesso: ${item}`)
   })
 
+  // Endpoint Update -: [PUT] /item/:id
+  app.put('/item/:id', function (req, res){
+    // Obtemos o id no parametro da rota
+    const id = req.params.id
+
+    // Obtemos as informações do item no corpo da requisição 
+    // no caso só o nome
+    const novoItem =  req.body.nome
+    console.log(novoItem)
+
+    // Atualizamos o item na lista
+    lista[id - 1] = novoItem
+
+    res.send(`Item atualizado com sucesso: ${id}. ${novoItem}`)
+  })
+
+
 app.listen(3000)
